@@ -1,4 +1,4 @@
-\usepackage{apacite}
+% ========= PACKAGES =========
 \usepackage{indentfirst}
 \usepackage{fontspec}
 \usepackage{xunicode}
@@ -6,6 +6,12 @@
 \usepackage{titlesec}
 \usepackage[a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
 \usepackage[hyphens,spaces]{url}
+\usepackage[
+  backend=biber,
+  style=apa,
+]{biblatex}
+
+\addbibresource{bibliography.bib}
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont{THSarabunNew}[
@@ -18,8 +24,9 @@
 \XeTeXlinebreaklocale `TH`
 \XeTeXlinebreakskip = 0pt plus 1.1pt
 
-\newcommand{\quotes}[1]{``#1''}
+% ========= COMMANDS =========
 
+\newcommand{\quotes}[1]{``#1''}
 \renewcommand{\thesection}{บทที่ \arabic{section}}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 
