@@ -1,38 +1,15 @@
 \documentclass[12pt,twoside]{report}
-
-\usepackage{apacite}
-\usepackage{indentfirst}
-\usepackage{fontspec}
-\usepackage{xunicode}
-\usepackage{xltxtra}
-\usepackage{titlesec}
-\usepackage[a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
-
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont{THSarabunNew}[
-    Path=./Resources/Fonts/,
-    Extension=.ttf,
-    BoldFont=* Bold,
-    ItalicFont=* Italic,
-    BoldItalicFont=* BoldItalic
-]
-\XeTeXlinebreaklocale `TH`
-\XeTeXlinebreakskip = 0pt plus 1.1pt
-
-\newcommand{\quotes}[1]{``#1''}
-
-\renewcommand{\thesection}{บทที่ \arabic{section}}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-
-\titleformat{\section}[display]{\bfseries\centering\Large}{\thesection}{0em}{\Large}{}
+\usepackage{style}
 
 \begin{document}
-\input{ch1.tex}
-\newpage
+\include{ch1.tex}
 
-\input{ch2.tex}
-\newpage
+\include{ch2.tex}
+Hello world
+Testing \cite{test01}
+Government \cite{SomeGovernment}
+\LaTeX
 
-% \bibliographystyle{apacite}
-% \bibliography{biblography}
+\bibliographystyle{apacite}
+\bibliography{biblography}
 \end{document}
