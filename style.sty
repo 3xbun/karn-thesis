@@ -29,5 +29,7 @@
 \newcommand{\quotes}[1]{``#1''}
 \renewcommand{\thesection}{บทที่ \arabic{section}}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}}
 
 \titleformat{\section}[display]{\bfseries\centering\Large}{\thesection}{0em}{\Large}{}
