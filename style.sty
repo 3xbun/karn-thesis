@@ -14,12 +14,21 @@
 \usepackage{enumitem}
 \usepackage{graphicx}
 
+\usepackage{ragged2e}
+
 \graphicspath{ {./Resources/Images/} }
 
-\setlist{
-  listparindent=\parindent,
+\setlist {
   parsep=0pt,
+  listparindent=2em,
 }
+
+\setenumerate{
+  parsep=0pt,
+  listparindent=2em,
+  % itemindent=\parindent
+}
+
 
 \addbibresource{bibliography.bib}
 
@@ -41,5 +50,7 @@
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}}
+\renewcommand{\labelenumiii}{\theenumiii}
+\renewcommand{\theenumiii}{\theenumii.\arabic{enumiii}}
 
 \titleformat{\section}[display]{\bfseries\centering\Large}{\thesection}{0em}{\Large}{}
